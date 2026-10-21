@@ -1,0 +1,11 @@
+# UDCT v7.13 Post-registration — Hessian Research Archive
+#
+# The original Python/JSON ZIP dependencies have not been audited or executed.
+# Therefore no third-party packages or versions are asserted here.
+# This comment-only file is an intentional placeholder, NOT a verified
+# or sufficient environment for reproducing the reported calculations.
+#
+# After inspecting the original scripts, list direct dependencies with
+# tested versions (example syntax only: package-name==X.Y.Z), and record
+# the Python interpreter version in README.md.
+# Do not treat `pip install -r requirements.txt` as validation of the code.
