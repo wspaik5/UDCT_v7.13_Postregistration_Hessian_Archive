@@ -1,0 +1,66 @@
+{
+  "method": "archived-array analysis, not independent integration",
+  "archive_sha256": "822177b6b4619e845f1bbd94c285d5c0c1967457490b80fe1151876770cf3335",
+  "python_scripts": 77,
+  "python_syntax_failures": [],
+  "endpoint_groups": 48,
+  "common_profiles": 288,
+  "all_groups_six_arms": true,
+  "all_profiles_1200_samples": true,
+  "common_negative_witness_groups": [],
+  "B01": {
+    "B01|0.35": {
+      "arms": 6,
+      "samples": 1200,
+      "E_common": 0.023564479964140572,
+      "tau_common": 0.11782239982070286,
+      "minimum_common": 0.23114827175659702,
+      "common_negative_witness": false
+    },
+    "B01|0.4": {
+      "arms": 6,
+      "samples": 1200,
+      "E_common": 0.023432939893254234,
+      "tau_common": 0.11716469946627117,
+      "minimum_common": 0.5521507679437055,
+      "common_negative_witness": false
+    }
+  },
+  "B18": {
+    "B18|2": {
+      "arms": 6,
+      "samples": 1200,
+      "E_common": 0.024257317834583292,
+      "tau_common": 0.12128658917291646,
+      "minimum_common": 0.6495916252329091,
+      "common_negative_witness": false
+    },
+    "B18|2.25": {
+      "arms": 6,
+      "samples": 1200,
+      "E_common": 0.024257318091043256,
+      "tau_common": 0.12128659045521628,
+      "minimum_common": 0.26879578401106685,
+      "common_negative_witness": false
+    }
+  },
+  "B18_target_JSON_count": 0,
+  "B19_target_JSON_count": 2,
+  "B19_duplicate_byte_identical": true,
+  "inventory_B18": {
+    "target": "B18",
+    "status": "unresolved_numerical_margin",
+    "endpoints": {
+      "2.0": "robust_positive",
+      "2.25": "unresolved_numerical_margin"
+    },
+    "six_arms_executed": true,
+    "hessian_executed": false,
+    "sha256": "448f1533e6ab05381ef5641824bfa842edd59f03b1bed94bdbea71b23cc6037c"
+  },
+  "limitations": [
+    "Common-domain NPZ cannot reconstruct native-grid F minima",
+    "Cannot claim independent simulation or full physical 3D Hessian",
+    "Archived inventory labels are not independently validated from native minima"
+  ]
+}
