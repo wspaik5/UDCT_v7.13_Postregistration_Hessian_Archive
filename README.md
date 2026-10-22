@@ -1,54 +1,52 @@
-# UDCT v7.13 Post-registration — Hessian Research Archive
+# UDCT v7.13 Post-registration — Hessian Archive and Reproducibility Audit
 
-## Overview
+**Status:** retrospective execution audit; numerical reproduction **not yet established**. This update does not modify the original scientific report or archived scripts.
 
-This repository preserves the **UDCT v7.13 post-registration** research record on Hessian-related tests and physically admissible solutions in dwarf-galaxy modified-gravity/Jeans calculations. It is a **retrospective technical audit**, not a claim that a new gravity theory has been observationally confirmed.
+## Scope and scientific boundaries
 
-The archive is intended to make the reported assumptions, tested cases, outcomes (including failures), and limitations inspectable. The accompanying consolidated research report is the primary source for the precise definitions, figures, numerical results, and conclusions.
+This archive documents Hessian-related sign tests and Jeans physical-admissibility boundaries under specified numerical and physical assumptions. The consolidated original PDF remains authoritative for the precise equations, figures, and reported outcomes. A computational sign or inadmissibility boundary in one implementation is **not** a universal no-go result for MOND or modified gravity.
 
-## Repository contents
+The archived strict classification is **18 robust-positive, 30 unresolved, 0 robust-negative endpoints**. **Zero of 24** proposed strict sign-transition brackets was validated. The full physical **3-D total-potential Hessian was NOT EVALUATED**. These are *reported archive classifications*, **not independently reproduced results**.
 
-| Item | Purpose |
-| --- | --- |
-| `UDCT_v7.13_Postregistration_Complete_Research_Report_DOI_Linked.pdf` | Consolidated research report (Main Report + Technical Supplement) |
-| `UDCT_v7.13_Original_Hessian_Research_Archive.zip` | Original archive (77 Python, 81 JSON, 2 NPZ, 2 TXT; 162 files total) |
-| `README.md` | This overview and guidance |
-| `requirements.txt` | Intentional placeholder — see qualification below |
+Hydrus I observationally motivated model inputs do **not** constitute a likelihood fit to the complete individual stellar line-of-sight velocity data. Hydrus I-related calculations also predate v7.13.
 
-**File counts** in the ZIP have been verified against the archive listing.
+## Original files (retain unchanged)
 
-## Research scope and interpretation
+- `UDCT_v7.13_Postregistration_Complete_Research_Report_DOI_Linked.pdf` — original consolidated report (not included in this update)
+- `UDCT_v7.13_Original_Hessian_Research_Archive.zip` — original archive, reported as 77 Python + 81 JSON + 2 NPZ + 2 TXT (not included in this update)
 
-- Focus: stress-testing Hessian-related contributions and sign/physical-admissibility boundaries under stated model assumptions.
-- Negative or otherwise inadmissible results should be retained and reported rather than silently discarded.
-- Model calculations using observationally motivated inputs for **Hydrus I** are **not equivalent** to a direct likelihood fit or observational validation using the complete individual stellar line-of-sight velocity dataset.
-- Hydrus I-based calculations were also explored before v7.13; this release must not imply that all such work began with v7.13.
-- A boundary found in a specific implementation is not, by itself, a general no-go theorem for all MOND-like or modified-gravity theories.
-- Under the archived strict decision rule: **18 robust-positive, 30 unresolved, 0 robust-negative** endpoints. None of the 24 proposed strict sign-transition brackets is validated. The full physical 3-D total-potential Hessian remains **NOT EVALUATED**.
+## Audit update files
 
-## How to inspect and reproduce
+- `REPRODUCIBILITY_STATUS.md` — Claude's reported execution findings, qualifications, and follow-up acceptance criteria
+- `requirements.txt` — versions used in the reported partial execution check; **not a validated reproduction environment**
+- `audit_archive.py` — read-only ZIP inventory and static path/reference scanner, including SHA-256 manifest output
+- `VALIDATION_PLAN.md` — sequential validation gates and separate prospective experiments
 
-1. Read the consolidated PDF first, particularly its assumptions, methods, plots, limitations, and conclusions.
-2. Download and extract the original Hessian ZIP **without altering the archived originals**.
-3. Inspect the Python entry points and JSON schemas, then identify which script and configuration generated each reported figure/table.
-4. Use a clean Python virtual environment. **Do not assume** that `pip install -r requirements.txt` will produce a working environment — the file is deliberately a placeholder until dependencies are inspected and tested.
-5. Record Python/package versions, commands, input data provenance, random seeds (where applicable), and expected output checks before claiming a reproduced result.
+## What has actually been checked
 
-**Reproducibility status:** A verified one-command reproduction procedure and exact package versions cannot be supplied without inspecting and executing the original ZIP. The accompanying `requirements.txt` deliberately does not list untested dependencies. Once the scripts are examined, this section and the dependency file should be updated with tested commands and versions.
+According to the supplied Claude execution-audit record (2026-10-22), 1/77 scripts completed unmodified; 11 more completed after filename normalization in a scratch copy, for about 12/77 runnable. The outputs were **not compared** to archived JSON results, and B01–B24 six-arm scripts did not run. These findings are **attributed to the supplied audit**, not to a fresh execution in this update.
 
-## Preregistration and post-registration
+The present update has **not** rerun the original scripts because the full PDF and ZIP were not supplied with this request. The attached static-audit utility can be run when the ZIP is available.
 
-The preregistration records intended tests and decision criteria; this post-registration archive records subsequent implementation and outcomes. Any deviations from the preregistered plan should be identified in the consolidated report. Interpret exploratory follow-up tests separately from prespecified tests.
+## First steps
 
-## Links and citation
+1. Preserve the original PDF/ZIP byte-for-byte and record their SHA-256 hashes.
+2. Run `python audit_archive.py path/to/UDCT_v7.13_Original_Hessian_Research_Archive.zip --out audit_results` (Python standard library only).
+3. Inspect the inventory and missing references. Obtain original preregistration plan and v7.06/v7.10 inputs; never fabricate missing inputs.
+4. Repair paths and filename resolution **only in a separately versioned working copy**, documenting every change.
+5. Execute scripts with captured commands, software versions, return codes and outputs; compare outputs to archived JSON with preregistered field-specific tolerances.
+6. Only then proceed to B01–B24 convergence tests, full 3-D Hessian and direct Hydrus I stellar-data fits as **new, separately preregistered research**.
+
+## Citation and links
 
 - GitHub: https://github.com/wspaik5/UDCT_v7.13_Postregistration_Hessian_Archive
-- Zenodo DOI (reserved; registration upon publication): https://doi.org/10.5281/zenodo.23539127
-- v7.13 preregistration: DOI 10.5281/zenodo.23342971
-- v7.12 post-registration: DOI 10.5281/zenodo.23296444
+- Zenodo: https://doi.org/10.5281/zenodo.23539127
+- v7.13 preregistration: https://doi.org/10.5281/zenodo.23342971
+- v7.12 post-registration: https://doi.org/10.5281/zenodo.23296444
 
-Please cite the published Zenodo record and specify the archive version when referencing these results.
+When updating published repositories, label this as a **supplementary reproducibility audit** rather than a replacement of the original scientific result. The existing DOI should be retained only according to the repository's versioning policy.
 
-## Status
 
-Research archive / technical audit. Results are conditional on the stated equations, assumptions, data inputs, and numerical implementations; independent replication and direct observational comparison remain separate tasks. This record does not validate or falsify modified gravity.
+### Supplementary archive verification
+
+A new read-only cross-check (`verify_saved_evidence.py`, `SAVED_EVIDENCE_CHECK.json`) found a per-target evidence gap: the B18 exploratory JSON is absent and two B19 exploratory JSON files exist. The other 22 uniquely represented targets had internally consistent archived endpoint labels. This is **not** a rerun or confirmation of the published numerical results. See `REPRODUCIBILITY_STATUS.md` before citing complete per-target reproducibility.

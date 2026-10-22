@@ -1,0 +1,19 @@
+{
+  "archive_sha256": "822177b6b4619e845f1bbd94c285d5c0c1967457490b80fe1151876770cf3335",
+  "check_type": "Saved JSON cross-check only; no numerical integrations rerun",
+  "targets_checked": 22,
+  "endpoints_checked": 44,
+  "recomputed_saved_label_counts": {
+    "unresolved_numerical_margin": 27,
+    "robust_positive": 17
+  },
+  "archive_bracket_counts": {
+    "unresolved_numerical_margin": 24
+  },
+  "archive_physical_hessian_executed_count": 0,
+  "discrepancies": [
+    "B18: expected one evidence JSON, found 0",
+    "B19: expected one evidence JSON, found 2"
+  ],
+  "status": "INCOMPLETE_OR_FAIL"
+}
